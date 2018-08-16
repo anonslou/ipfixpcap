@@ -8,7 +8,7 @@ Proof of concept
 2. parse file with parse_templates.py - spec and cisco_templates.py files will be created automaticly
 3. run read_IPFIX_form_PCAP.py for pcap dump
 
-# limitation
+# limitations
 
 1. don't work for packet with template - only for data packets
-2. show field name and raw data - value decode added for ipv4 only.
+2. show field name and raw data - value decode added for ipv4 only
