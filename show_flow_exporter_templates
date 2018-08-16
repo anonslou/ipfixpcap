@@ -1,0 +1,390 @@
+show flow exporter templates details 
+Flow Exporter CONT-1:
+  Client: Option options interface-table
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 256
+  Source ID      : 6
+  Record Size    : 100
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | INTERFACE INPUT SNMP                                        |        |       10 |       10 |      0 |     4 |        |        |          |
+  | interface name short                                        |        |       82 |       82 |      4 |    32 |        |        |          |
+  | interface name long                                         |        |       83 |       83 |     36 |    64 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+  Client: Option options vrf-id-name-table
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 257
+  Source ID      : 6
+  Record Size    : 36
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | ROUTING VRF INPUT                                           |        |      234 |      234 |      0 |     4 |        |        |          |
+  | routing vrf name                                            |        |      236 |      236 |      4 |    32 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+  Client: Option options sampler-table
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 258
+  Source ID      : 6
+  Record Size    : 47
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | FLOW SAMPLER                                                |        |       48 |       48 |      0 |     4 |        |        |          |
+  | flow sampler name                                           |        |       84 |       84 |      4 |    40 |        |        |          |
+  | flow sampler algorithm export                               |        |       49 |       49 |     44 |     1 |        |        |          |
+  | flow sampler interval                                       |        |       50 |       50 |     45 |     2 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+  Client: Option options application-name
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 259
+  Source ID      : 6
+  Record Size    : 83
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | APPLICATION ID                                              |        |       95 |       95 |      0 |     4 |        |        |          |
+  | application name                                            |        |       96 |       96 |      4 |    24 |        |        |          |
+  | application description                                     |        |       94 |       94 |     28 |    55 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+  Client: Option classmap option table
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 260
+  Source ID      : 6
+  Record Size    : 772
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | C3PL CLASS CCE-ID                                           |      9 |     8233 |    41001 |      0 |     4 |        |        |          |
+  | c3pl class name                                             |      9 |     8234 |    41002 |      4 |   512 |        |        |          |
+  | c3pl class type                                             |      9 |     8235 |    41003 |    516 |   256 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+  Client: Option policymap option table
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 261
+  Source ID      : 6
+  Record Size    : 772
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | C3PL POLICY CCE-ID                                          |      9 |     8236 |    41004 |      0 |     4 |        |        |          |
+  | c3pl policy name                                            |      9 |     8237 |    41005 |      4 |   512 |        |        |          |
+  | c3pl policy type                                            |      9 |     8238 |    41006 |    516 |   256 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+  Client: Option sub-application-table
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 262
+  Source ID      : 6
+  Record Size    : 168
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | APPLICATION ID                                              |        |       95 |       95 |      0 |     4 |        |        |          |
+  | SUB APPLICATION TAG                                         |        |       97 |       97 |      4 |     4 |        |        |          |
+  | sub application name                                        |        |      109 |      109 |      8 |    80 |        |        |          |
+  | sub application description                                 |        |      110 |      110 |     88 |    80 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+  Client: Option options application-attributes
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 263
+  Source ID      : 6
+  Record Size    : 194
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | APPLICATION ID                                              |        |       95 |       95 |      0 |     4 |        |        |          |
+  | application category name                                   |      9 |    12232 |    45000 |      4 |    32 |        |        |          |
+  | application sub category name                               |      9 |    12233 |    45001 |     36 |    32 |        |        |          |
+  | application group name                                      |      9 |    12234 |    45002 |     68 |    32 |        |        |          |
+  | application traffic-class                                   |      9 |    12243 |    45011 |    100 |    32 |        |        |          |
+  | application business-relevance                              |      9 |    12244 |    45012 |    132 |    32 |        |        |          |
+  | p2p technology                                              |        |      288 |      288 |    164 |    10 |        |        |          |
+  | tunnel technology                                           |        |      289 |      289 |    174 |    10 |        |        |          |
+  | encrypted technology                                        |        |      290 |      290 |    184 |    10 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+  Client: MMA EXPORTER GROUP MMA-EXP-19
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 264
+  Source ID      : 6
+  Record Size    : 83
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | routing vrf input                                           |        |      234 |      234 |      0 |     4 |        |        |          |
+  | ipv4 source address                                         |        |        8 |        8 |      4 |     4 |        |        |          |
+  | ipv4 destination address                                    |        |       12 |       12 |      8 |     4 |        |        |          |
+  | transport rtp ssrc                                          |      9 |     4254 |    37022 |     12 |     4 |        |        |          |
+  | interface input snmp                                        |        |       10 |       10 |     16 |     4 |        |        |          |
+  | transport source-port                                       |        |        7 |        7 |     20 |     2 |        |        |          |
+  | transport destination-port                                  |        |       11 |       11 |     22 |     2 |        |        |          |
+  | ip protocol                                                 |        |        4 |        4 |     24 |     1 |        |        |          |
+  | connection initiator                                        |        |      239 |      239 |     25 |     1 |        |        |          |
+  | transport rtp payload-type                                  |      9 |     4273 |    37041 |     26 |     1 |        |        |          |
+  | ip dscp                                                     |        |      195 |      195 |     27 |     1 |        |        |          |
+  | ip ttl                                                      |        |      192 |      192 |     28 |     1 |        |        |          |
+  | datalink source-vlan-id                                     |        |       58 |       58 |     29 |     2 |        |        |          |
+  | transport packets lost counter                              |      9 |     4251 |    37019 |     31 |     4 |        |        |          |
+  | transport rtp jitter maximum                                |      9 |     4257 |    37025 |     35 |     4 |        |        |          |
+  | counter packets                                             |        |        2 |        2 |     39 |     4 |        |        |          |
+  | timestamp sys-uptime first                                  |        |       22 |       22 |     43 |     4 |        |        |          |
+  | timestamp sys-uptime last                                   |        |       21 |       21 |     47 |     4 |        |        |          |
+  | connection new-connections                                  |        |      278 |      278 |     51 |     4 |        |        |          |
+  | routing vrf output                                          |        |      235 |      235 |     55 |     4 |        |        |          |
+  | application id                                              |        |       95 |       95 |     59 |     4 |        |        |          |
+  | interface output snmp                                       |        |       14 |       14 |     63 |     4 |        |        |          |
+  | counter bytes long                                          |        |        1 |        1 |     67 |     8 |        |        |          |
+  | transport rtp jitter mean sum                               |      9 |     4325 |    37093 |     75 |     8 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+  Client: MMA EXPORTER GROUP MMA-EXP-20
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 265
+  Source ID      : 6
+  Record Size    : 83
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | ipv4 source address                                         |        |        8 |        8 |      0 |     4 |        |        |          |
+  | ipv4 destination address                                    |        |       12 |       12 |      4 |     4 |        |        |          |
+  | transport rtp ssrc                                          |      9 |     4254 |    37022 |      8 |     4 |        |        |          |
+  | routing vrf output                                          |        |      235 |      235 |     12 |     4 |        |        |          |
+  | interface output snmp                                       |        |       14 |       14 |     16 |     4 |        |        |          |
+  | transport source-port                                       |        |        7 |        7 |     20 |     2 |        |        |          |
+  | transport destination-port                                  |        |       11 |       11 |     22 |     2 |        |        |          |
+  | ip protocol                                                 |        |        4 |        4 |     24 |     1 |        |        |          |
+  | connection initiator                                        |        |      239 |      239 |     25 |     1 |        |        |          |
+  | transport rtp payload-type                                  |      9 |     4273 |    37041 |     26 |     1 |        |        |          |
+  | ip dscp                                                     |        |      195 |      195 |     27 |     1 |        |        |          |
+  | ip ttl                                                      |        |      192 |      192 |     28 |     1 |        |        |          |
+  | datalink source-vlan-id                                     |        |       58 |       58 |     29 |     2 |        |        |          |
+  | routing vrf input                                           |        |      234 |      234 |     31 |     4 |        |        |          |
+  | transport packets lost counter                              |      9 |     4251 |    37019 |     35 |     4 |        |        |          |
+  | transport rtp jitter maximum                                |      9 |     4257 |    37025 |     39 |     4 |        |        |          |
+  | counter packets                                             |        |        2 |        2 |     43 |     4 |        |        |          |
+  | timestamp sys-uptime first                                  |        |       22 |       22 |     47 |     4 |        |        |          |
+  | timestamp sys-uptime last                                   |        |       21 |       21 |     51 |     4 |        |        |          |
+  | connection new-connections                                  |        |      278 |      278 |     55 |     4 |        |        |          |
+  | application id                                              |        |       95 |       95 |     59 |     4 |        |        |          |
+  | interface input snmp                                        |        |       10 |       10 |     63 |     4 |        |        |          |
+  | counter bytes long                                          |        |        1 |        1 |     67 |     8 |        |        |          |
+  | transport rtp jitter mean sum                               |      9 |     4325 |    37093 |     75 |     8 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+Client: Flow Monitor CONT-app_ts_in
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 266
+  Source ID      : 256
+  Record Size    : 61
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | ip version                                                  |        |       60 |       60 |      0 |     1 |        |        |          |
+  | ip protocol                                                 |        |        4 |        4 |      1 |     1 |        |        |          |
+  | ip dscp                                                     |        |      195 |      195 |      2 |     1 |        |        |          |
+  | routing vrf input                                           |        |      234 |      234 |      3 |     4 |        |        |          |
+  | interface input snmp                                        |        |       10 |       10 |      7 |     4 |        |        |          |
+  | application id                                              |        |       95 |       95 |     11 |     4 |        |        |          |
+  | datalink source-vlan-id                                     |        |       58 |       58 |     15 |     2 |        |        |          |
+  | connection initiator                                        |        |      239 |      239 |     17 |     1 |        |        |          |
+  | flow direction                                              |        |       61 |       61 |     18 |     1 |        |        |          |
+  | services waas segment                                       |      9 |     9252 |    42020 |     19 |     1 |        |        |          |
+  | interface output snmp                                       |        |       14 |       14 |     20 |     4 |        |        |          |
+  | routing vrf output                                          |        |      235 |      235 |     24 |     4 |        |        |          |
+  | services waas passthrough-reason                            |      9 |     9253 |    42021 |     28 |     1 |        |        |          |
+  | counter bytes long                                          |        |        1 |        1 |     29 |     8 |        |        |          |
+  | counter packets                                             |        |        2 |        2 |     37 |     4 |        |        |          |
+  | timestamp sys-uptime first                                  |        |       22 |       22 |     41 |     4 |        |        |          |
+  | timestamp sys-uptime last                                   |        |       21 |       21 |     45 |     4 |        |        |          |
+  | connection new-connections                                  |        |      278 |      278 |     49 |     4 |        |        |          |
+  | connection sum-duration                                     |        |      279 |      279 |     53 |     8 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+Client: Flow Monitor CONT-art_ipv4
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 267
+  Source ID      : 512
+  Record Size    : 134
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | connection client ipv4 address                              |      9 |    12236 |    45004 |      0 |     4 |        |        |          |
+  | connection server ipv4 address                              |      9 |    12237 |    45005 |      4 |     4 |        |        |          |
+  | ip protocol                                                 |        |        4 |        4 |      8 |     1 |        |        |          |
+  | ip dscp                                                     |        |      195 |      195 |      9 |     1 |        |        |          |
+  | ip ttl                                                      |        |      192 |      192 |     10 |     1 |        |        |          |
+  | connection server transport port                            |      9 |    12241 |    45009 |     11 |     2 |        |        |          |
+  | routing vrf input                                           |        |      234 |      234 |     13 |     4 |        |        |          |
+  | application id                                              |        |       95 |       95 |     17 |     4 |        |        |          |
+  | datalink source-vlan-id                                     |        |       58 |       58 |     21 |     2 |        |        |          |
+  | interface input snmp                                        |        |       10 |       10 |     23 |     4 |        |        |          |
+  | connection initiator                                        |        |      239 |      239 |     27 |     1 |        |        |          |
+  | services waas segment                                       |      9 |     9252 |    42020 |     28 |     1 |        |        |          |
+  | interface output snmp                                       |        |       14 |       14 |     29 |     4 |        |        |          |
+  | services waas passthrough-reason                            |      9 |     9253 |    42021 |     33 |     1 |        |        |          |
+  | timestamp sys-uptime first                                  |        |       22 |       22 |     34 |     4 |        |        |          |
+  | timestamp sys-uptime last                                   |        |       21 |       21 |     38 |     4 |        |        |          |
+  | connection new-connections                                  |        |      278 |      278 |     42 |     4 |        |        |          |
+  | connection sum-duration                                     |        |      279 |      279 |     46 |     8 |        |        |          |
+  | connection delay response to-server sum                     |      9 |     9303 |    42071 |     54 |     4 |        |        |          |
+  | connection server counter responses                         |      9 |     9292 |    42060 |     58 |     4 |        |        |          |
+  | connection delay response to-server histogram late          |      9 |     9300 |    42068 |     62 |     4 |        |        |          |
+  | connection delay network to-server sum                      |      9 |     9319 |    42087 |     66 |     4 |        |        |          |
+  | connection delay network to-client sum                      |      9 |     9316 |    42084 |     70 |     4 |        |        |          |
+  | connection client counter packets retransmitted             |      9 |     9268 |    42036 |     74 |     4 |        |        |          |
+  | connection delay network client-to-server sum               |      9 |     9313 |    42081 |     78 |     4 |        |        |          |
+  | connection delay application sum                            |      9 |     9306 |    42074 |     82 |     4 |        |        |          |
+  | connection delay application max                            |      9 |     9307 |    42075 |     86 |     4 |        |        |          |
+  | connection delay response client-to-server sum              |      9 |     9309 |    42077 |     90 |     4 |        |        |          |
+  | connection transaction duration sum                         |      9 |     9273 |    42041 |     94 |     4 |        |        |          |
+  | connection transaction counter complete                     |      9 |     9272 |    42040 |     98 |     4 |        |        |          |
+  | connection server counter bytes long                        |        |      232 |      232 |    102 |     8 |        |        |          |
+  | connection server counter packets long                      |        |      299 |      299 |    110 |     8 |        |        |          |
+  | connection client counter bytes long                        |        |      231 |      231 |    118 |     8 |        |        |          |
+  | connection client counter packets long                      |        |      298 |      298 |    126 |     8 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+Client: Flow Monitor CONT-url_ipv4
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 268
+  Source ID      : 768
+  Record Size    : 132 + var
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | connection client ipv4 address                              |      9 |    12236 |    45004 |      0 |     4 |        |        |          |
+  | connection server ipv4 address                              |      9 |    12237 |    45005 |      4 |     4 |        |        |          |
+  | connection client transport port                            |      9 |    12240 |    45008 |      8 |     2 |        |        |          |
+  | connection server transport port                            |      9 |    12241 |    45009 |     10 |     2 |        |        |          |
+  | routing vrf input                                           |        |      234 |      234 |     12 |     4 |        |        |          |
+  | interface input snmp                                        |        |       10 |       10 |     16 |     4 |        |        |          |
+  | connection initiator                                        |        |      239 |      239 |     20 |     1 |        |        |          |
+  | connection id                                               |      9 |    12242 |    45010 |     21 |     4 |        |        |          |
+  | application id                                              |        |       95 |       95 |     25 |     4 |        |        |          |
+  | interface output snmp                                       |        |       14 |       14 |     29 |     4 |        |        |          |
+  | flow sampler                                                |        |       48 |       48 |     33 |     1 |        |        |          |
+  | services waas segment                                       |      9 |     9252 |    42020 |     34 |     1 |        |        |          |
+  | services waas passthrough-reason                            |      9 |     9253 |    42021 |     35 |     1 |        |        |          |
+  | application http uri statistics                             |      9 |     9357 |    42125 |     36 |   var |        |        |          |
+  | application http host                                       |      9 |    12235 |    45003 |     38 |   var |      3 |     80 |    13314 |
+  | timestamp sys-uptime first                                  |        |       22 |       22 |     40 |     4 |        |        |          |
+  | timestamp sys-uptime last                                   |        |       21 |       21 |     44 |     4 |        |        |          |
+  | connection new-connections                                  |        |      278 |      278 |     48 |     4 |        |        |          |
+  | connection server counter bytes long                        |        |      232 |      232 |     52 |     8 |        |        |          |
+  | connection server counter packets long                      |        |      299 |      299 |     60 |     8 |        |        |          |
+  | connection client counter bytes long                        |        |      231 |      231 |     68 |     8 |        |        |          |
+  | connection client counter packets long                      |        |      298 |      298 |     76 |     8 |        |        |          |
+  | connection delay response to-server sum                     |      9 |     9303 |    42071 |     84 |     4 |        |        |          |
+  | connection server counter responses                         |      9 |     9292 |    42060 |     88 |     4 |        |        |          |
+  | connection delay response to-server histogram late          |      9 |     9300 |    42068 |     92 |     4 |        |        |          |
+  | connection delay network to-server sum                      |      9 |     9319 |    42087 |     96 |     4 |        |        |          |
+  | connection delay network to-client sum                      |      9 |     9316 |    42084 |    100 |     4 |        |        |          |
+  | connection client counter packets retransmitted             |      9 |     9268 |    42036 |    104 |     4 |        |        |          |
+  | connection delay network client-to-server sum               |      9 |     9313 |    42081 |    108 |     4 |        |        |          |
+  | connection delay application sum                            |      9 |     9306 |    42074 |    112 |     4 |        |        |          |
+  | connection delay application max                            |      9 |     9307 |    42075 |    116 |     4 |        |        |          |
+  | connection delay response client-to-server sum              |      9 |     9309 |    42077 |    120 |     4 |        |        |          |
+  | connection transaction duration sum                         |      9 |     9273 |    42041 |    124 |     4 |        |        |          |
+  | connection transaction counter complete                     |      9 |     9272 |    42040 |    128 |     4 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+Client: Flow Monitor CONT-conv_ts_ipv4
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 269
+  Source ID      : 1024
+  Record Size    : 86
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | connection client ipv4 address                              |      9 |    12236 |    45004 |      0 |     4 |        |        |          |
+  | connection server ipv4 address                              |      9 |    12237 |    45005 |      4 |     4 |        |        |          |
+  | ip protocol                                                 |        |        4 |        4 |      8 |     1 |        |        |          |
+  | ip dscp                                                     |        |      195 |      195 |      9 |     1 |        |        |          |
+  | ip ttl                                                      |        |      192 |      192 |     10 |     1 |        |        |          |
+  | connection server transport port                            |      9 |    12241 |    45009 |     11 |     2 |        |        |          |
+  | routing vrf input                                           |        |      234 |      234 |     13 |     4 |        |        |          |
+  | application id                                              |        |       95 |       95 |     17 |     4 |        |        |          |
+  | datalink source-vlan-id                                     |        |       58 |       58 |     21 |     2 |        |        |          |
+  | interface input snmp                                        |        |       10 |       10 |     23 |     4 |        |        |          |
+  | connection initiator                                        |        |      239 |      239 |     27 |     1 |        |        |          |
+  | services waas segment                                       |      9 |     9252 |    42020 |     28 |     1 |        |        |          |
+  | interface output snmp                                       |        |       14 |       14 |     29 |     4 |        |        |          |
+  | services waas passthrough-reason                            |      9 |     9253 |    42021 |     33 |     1 |        |        |          |
+  | timestamp sys-uptime first                                  |        |       22 |       22 |     34 |     4 |        |        |          |
+  | timestamp sys-uptime last                                   |        |       21 |       21 |     38 |     4 |        |        |          |
+  | connection new-connections                                  |        |      278 |      278 |     42 |     4 |        |        |          |
+  | connection sum-duration                                     |        |      279 |      279 |     46 |     8 |        |        |          |
+  | connection server counter bytes long                        |        |      232 |      232 |     54 |     8 |        |        |          |
+  | connection server counter packets long                      |        |      299 |      299 |     62 |     8 |        |        |          |
+  | connection client counter bytes long                        |        |      231 |      231 |     70 |     8 |        |        |          |
+  | connection client counter packets long                      |        |      298 |      298 |     78 |     8 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+Client: Flow Monitor CONT-app_ts_out
+  Exporter Format: IPFIX (Version 10)
+  Template ID    : 270
+  Source ID      : 1280
+  Record Size    : 61
+  Template layout
+  ____________________________________________________________________________________________________________________________________________
+  |                           Field                             | Ent.ID | Field ID |   Full   | Offset |  Size |      App.Id     | SubApp.ID|
+  |                                                             |        |          | Field ID |        |       | Eng.ID | Sel.ID |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  | ip version                                                  |        |       60 |       60 |      0 |     1 |        |        |          |
+  | ip protocol                                                 |        |        4 |        4 |      1 |     1 |        |        |          |
+  | ip dscp                                                     |        |      195 |      195 |      2 |     1 |        |        |          |
+  | application id                                              |        |       95 |       95 |      3 |     4 |        |        |          |
+  | datalink source-vlan-id                                     |        |       58 |       58 |      7 |     2 |        |        |          |
+  | routing vrf input                                           |        |      234 |      234 |      9 |     4 |        |        |          |
+  | interface input snmp                                        |        |       10 |       10 |     13 |     4 |        |        |          |
+  | connection initiator                                        |        |      239 |      239 |     17 |     1 |        |        |          |
+  | interface output snmp                                       |        |       14 |       14 |     18 |     4 |        |        |          |
+  | flow direction                                              |        |       61 |       61 |     22 |     1 |        |        |          |
+  | routing vrf output                                          |        |      235 |      235 |     23 |     4 |        |        |          |
+  | services waas segment                                       |      9 |     9252 |    42020 |     27 |     1 |        |        |          |
+  | services waas passthrough-reason                            |      9 |     9253 |    42021 |     28 |     1 |        |        |          |
+  | counter bytes long                                          |        |        1 |        1 |     29 |     8 |        |        |          |
+  | counter packets                                             |        |        2 |        2 |     37 |     4 |        |        |          |
+  | timestamp sys-uptime first                                  |        |       22 |       22 |     41 |     4 |        |        |          |
+  | timestamp sys-uptime last                                   |        |       21 |       21 |     45 |     4 |        |        |          |
+  | connection new-connections                                  |        |      278 |      278 |     49 |     4 |        |        |          |
+  | connection sum-duration                                     |        |      279 |      279 |     53 |     8 |        |        |          |
+  --------------------------------------------------------------------------------------------------------------------------------------------
+
+
