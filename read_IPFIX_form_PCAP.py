@@ -23,8 +23,9 @@ def inet_to_str(inet):
 def print_msg(msg):
     for rec in msg.namedict_iterator():
         for k, v in rec.items():
-            if 'ipv4' in k:
-                v = '.'.join(map(str, v))
+            if 'ipv4' in k or 'ipv6' in k:
+                v = inet_to_str(v)
+                # v = '.'.join(map(str, v))
             print("{}: {}".format(k, v))
 
 

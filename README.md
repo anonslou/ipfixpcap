@@ -1,6 +1,6 @@
 # Parse IPFIX data from pcap file
 
-Proof of concept
+Proof of concept (python 3.7)
 
 ## usage
 
